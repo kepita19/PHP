@@ -14,4 +14,5 @@ echo("<br> Multi ". $multi);
 echo("<br> zati ". $zati);
 echo("<br> Modulo ". $modulua);
 
+echo(" <br> Emaitza: Gehiketa:". $suma. " Kenketa ". $resta." biderketa ". $multi. " Zatiketa ". $zati. " Modulua ". $modulua. " da.")
 ?>
