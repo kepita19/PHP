@@ -4,11 +4,14 @@
         {
             "label": "PHP Zerbitzaria",
             "type": "shell",
-            "command": "php",
+            "command": "C:\\xampp\\php\\php.exe",
             "args": [
                 "-S",
-                "localhost:8000"
+                "localhost:8080"
             ],
+            "options": {
+                "cwd": "${workspaceFolder}/.."
+            },
             "isBackground": true,
             "problemMatcher": []
         }

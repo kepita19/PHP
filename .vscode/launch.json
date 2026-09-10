@@ -1,0 +1,12 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Lanzar archivo PHP actual",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:8080/PHPAriketak/${relativeFile}",
+            "preLaunchTask": "PHP Zerbitzaria"
+        }
+    ]
+}
