@@ -1,6 +1,6 @@
 <?php
 
-$irteeraData = new DateTime('2026-09-20 14:30:00');
+$irteeraData = new DateTime('2026-09-20 16:20:00');
 $oraingoData = new DateTime();
 
 if ($irteeraData > $oraingoData) {

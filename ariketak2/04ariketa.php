@@ -6,6 +6,6 @@ $batura = 0;
 
 for ($zenbakia = $lehenZenb; $zenbakia <= $azkenZenb; $zenbakia++) {
 	$batura += $zenbakia;
-	echo $zenbakia . ": " . $batura . "<br>\n";
+	echo $zenbakia . " : " . $batura . "<br>\n";
 }
 ?>
