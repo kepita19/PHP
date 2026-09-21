@@ -13,7 +13,7 @@ $hilabeteak = array(
     "Azaroa" => 30,
     "Abendua" => 31
 );
-?>
+?> 
 
 <table border="1">
     <tr>
@@ -23,7 +23,7 @@ $hilabeteak = array(
     <?php foreach ($hilabeteak as $hilabetea => $egunak): ?>
         <tr>
             <td><?php echo $hilabetea; ?></td>
-            <td><?php echo $egunak; ?></td>
+            <td><?php echo $egunak;  ?></td>
         </tr>
     <?php endforeach; ?>
 </table>

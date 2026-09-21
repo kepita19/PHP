@@ -30,5 +30,5 @@ $pertsonak = array($pertsona1, $pertsona2);
 				<td><?php echo $pertsona["NANa"]; ?></td>
 			</tr>
 		<?php endforeach; ?>
-	</tbody>
+	</tbody> 
 </table>
