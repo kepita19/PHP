@@ -1,6 +1,6 @@
 <?php
-$user = "admin";
-$password = password_hash("1234", PASSWORD_DEFAULT);
+$user = "paco";
+$password = password_hash("fiestas", PASSWORD_DEFAULT);
 $mezua = isset($_GET["errorea"]) ? $_GET["errorea"] : "";
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
