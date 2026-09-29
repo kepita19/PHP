@@ -1,14 +1,18 @@
 <?php
+session_start();
+
 $user = "paco";
 $password = password_hash("fiestas", PASSWORD_DEFAULT);
 $mezua = isset($_GET["errorea"]) ? $_GET["errorea"] : "";
+$loginCorrecto = false;
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $erabiltzailea = isset($_POST["erabiltzailea"]) ? $_POST["erabiltzailea"] : "";
     $pasahitza = isset($_POST["pasahitza"]) ? $_POST["pasahitza"] : "";
 
     if ($erabiltzailea === $user && password_verify($pasahitza, $password)) {
-        $mezua = "Login zuzena izan da.";
+        $_SESSION["erabiltzailea"] = $erabiltzailea;
+        $loginCorrecto = true;
     } else {
         header("Location: 04ariketaLogin.php?errorea=" . urlencode("Erabiltzaile edo pasahitz okerra"));
         exit;
@@ -40,4 +44,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         <p class="<?php echo isset($_GET["errorea"]) ? "errorea" : "ondo"; ?>"><?php echo htmlspecialchars($mezua, ENT_QUOTES, "UTF-8"); ?></p>
     <?php endif; ?>
 </body>
+<?php if ($loginCorrecto): ?>
+    <script>
+        alert("Login zuzena izan da. Ongi etorri, <?php echo htmlspecialchars($erabiltzailea, ENT_QUOTES, "UTF-8"); ?>!");
+        window.location.href = "05tresEnRaya.php";
+    </script>
+<?php endif; ?>
 </html>
